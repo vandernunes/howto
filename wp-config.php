@@ -25,7 +25,7 @@ define('DB_USER', getenv("DATABASE_USER"));
 define('DB_PASSWORD', getenv("DATABASE_PASSWORD"));
 
 /** nome do host do MySQL */
-define('DB_HOST', 'mysql');
+define('DB_HOST', getenv("DATABASE_HOST"));
 #define('DB_HOST', getenv(strtoupper(getenv("DATABASE_SERVICE_NAME"))."_SERVICE_HOST"). ':' . getenv(strtoupper(getenv("DATABASE_SERVICE_NAME"))."_SERVICE_PORT"));
 
 /** Conjunto de caracteres do banco de dados a ser usado na criação das tabelas. */
