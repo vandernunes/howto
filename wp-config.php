@@ -16,16 +16,17 @@
 
 // ** Configurações do MySQL - Você pode pegar essas informações com o serviço de hospedagem ** //
 /** O nome do banco de dados do WordPress */
-define('DB_NAME', 'sampledb');
+define('DB_NAME', getenv("DATABASE_NAME"));
 
 /** Usuário do banco de dados MySQL */
-define('DB_USER', 'userhWF');
+define('DB_USER', getenv("DATABASE_USER"));
 
 /** Senha do banco de dados MySQL */
-define('DB_PASSWORD', 'EJQ8SknCx7KqdoTh');
+define('DB_PASSWORD', getenv("DATABASE_PASSWORD"));
 
 /** nome do host do MySQL */
-define('DB_HOST', getenv(strtoupper(getenv("DATABASE_SERVICE_NAME"))."_SERVICE_HOST"). ':' . getenv(strtoupper(getenv("DATABASE_SERVICE_NAME"))."_SERVICE_PORT"));
+define('DB_HOST', 'mysql');
+#define('DB_HOST', getenv(strtoupper(getenv("DATABASE_SERVICE_NAME"))."_SERVICE_HOST"). ':' . getenv(strtoupper(getenv("DATABASE_SERVICE_NAME"))."_SERVICE_PORT"));
 
 /** Conjunto de caracteres do banco de dados a ser usado na criação das tabelas. */
 define('DB_CHARSET', 'utf8');
